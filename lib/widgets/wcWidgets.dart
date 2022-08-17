@@ -17,13 +17,31 @@ GestureDetector largeButton(VoidCallback function, Color bgColor, String text) {
     ),
   );
 }
+GestureDetector smallButton(VoidCallback function, Color bgColor, String text) {
+  return GestureDetector(
+    onTap: function,
+    child: Container(
+      width: 55,
+      height: 30,
+      decoration: BoxDecoration(
+        color: bgColor,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          width: 1,
+        ),
+      ),
+      child: Center(child: Text(text)),
+    ),
+  );
+}
 
 Text titleText(String text) {
   return Text(
     text,
     style: const TextStyle(
+      
       fontWeight: FontWeight.bold,
-      fontSize: 30,
+      fontSize: 25,
     ),
   );
 }
