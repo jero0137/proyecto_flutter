@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class DomiciliosPage extends StatelessWidget {
-  const DomiciliosPage({Key? key}) : super(key: key);
+class SedesPage extends StatelessWidget {
+  const SedesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

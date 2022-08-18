@@ -17,6 +17,7 @@ GestureDetector largeButton(VoidCallback function, Color bgColor, String text) {
     ),
   );
 }
+
 GestureDetector smallButton(VoidCallback function, Color bgColor, String text) {
   return GestureDetector(
     onTap: function,
@@ -39,7 +40,6 @@ Text titleText(String text) {
   return Text(
     text,
     style: const TextStyle(
-      
       fontWeight: FontWeight.bold,
       fontSize: 25,
     ),
@@ -77,5 +77,24 @@ SizedBox textField(String htext) {
         hintText: htext,
       ),
     ),
+  );
+}
+
+SizedBox spaciador(double height, double width) {
+  return SizedBox(
+    width: width,
+    height: height,
+  );
+}
+
+Row filaComida(String asset, String namePlato, String precio) {
+  return Row(
+    children: [
+      Image(image: AssetImage(asset)),
+      Text(namePlato),
+      Spacer(),
+      Text(precio),
+      Spacer(),
+    ],
   );
 }
