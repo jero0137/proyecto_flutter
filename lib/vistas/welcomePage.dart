@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:proyecto_flutter/vistas/domiciliosPage.dart';
 import 'package:proyecto_flutter/vistas/menuPage.dart';
+import 'package:proyecto_flutter/vistas/reservasPage.dart';
+import 'package:proyecto_flutter/vistas/sedesPage.dart';
 import 'package:proyecto_flutter/vistas/signInPage.dart';
 import 'package:proyecto_flutter/vistas/signUpPage.dart';
 import 'package:proyecto_flutter/widgets/wcWidgets.dart';
@@ -30,6 +33,7 @@ class welcomePage extends StatelessWidget {
           Row(
             children: [
               spaciador(50, screenWidth * 0.4),
+              //Boton para Sign up
               smallButton(
                 () {
                   //Aqui va la funcion
@@ -43,6 +47,7 @@ class welcomePage extends StatelessWidget {
                 Color(0xFF58D68D),
                 "Sign up",
               ),
+              //Boton para sign in
               smallButton(
                 () {
                   //Aqui va la funcion
@@ -61,13 +66,14 @@ class welcomePage extends StatelessWidget {
           Row(
             children: [
               Spacer(),
-              const Image(image: AssetImage("assets/logo.png")),
+              Image(image: AssetImage("assets/logo.png")),
               titleText("Restauranto"),
               Spacer(),
             ],
           ),
           subTitle("Bienvenido a restauranto seleccione una opcion"),
           Spacer(flex: 1),
+          //Boton para ver el menu
           largeButton(() {
             Navigator.push(
               context,
@@ -77,22 +83,25 @@ class welcomePage extends StatelessWidget {
             );
           }, Color(0xFF58D68D), "Menú"),
           Spacer(),
+          //Boton para domicilios
+
           largeButton(() {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) {
-                return menuPage();
+                return DomiciliosPage();
               }),
             );
           }, Color(0xFF58D68D), "Pedir domicilio"),
           Spacer(),
+          //Boton para reservar
           largeButton(
             () {
               //Aqui va la funcion
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) {
-                  return SignInPage();
+                  return ReservasPage();
                 }),
               );
             },
@@ -100,13 +109,14 @@ class welcomePage extends StatelessWidget {
             "Reservar",
           ),
           Spacer(),
+          //Boton  para ver sedes
           largeButton(
             () {
               //Aqui va la funcion
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) {
-                  return SignUpPage();
+                  return SedesPage();
                 }),
               );
             },

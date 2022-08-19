@@ -98,3 +98,30 @@ Row filaComida(String asset, String namePlato, String precio) {
     ],
   );
 }
+
+Row filaPedido(String asset, String namePlato, String precio) {
+  return Row(
+    children: [
+      GestureDetector(
+        onTap: () {},
+        child: Container(
+          width: 70,
+          height: 70,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(
+              width: 1,
+            ),
+          ),
+          child: Center(
+              child: Image(
+            image: AssetImage(asset),
+          )),
+        ),
+      ),
+      Text(namePlato),
+      Spacer(),
+      Text(precio),
+    ],
+  );
+}
