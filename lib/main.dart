@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       home:  Scaffold(
         backgroundColor: Color(0xFFDC7633),
-        body: welcomePage(),
+        body: SignInPage(),
       ),
     );
   }

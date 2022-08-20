@@ -21,48 +21,20 @@ class welcomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
-    return Center(
+    return Scaffold(
+      backgroundColor: Color(0xFFDC7633),
+      appBar: barra("Inicio", context),
+      body: Center(
       child: Container(
-        width: screenWidth * 0.7,
-        height: screenHeight * 0.9,
+        width: screenWidth ,
+        height: screenHeight,
         decoration: BoxDecoration(
           color: Color(0xFFF7F9F9),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(children: [
-          Row(
-            children: [
-              spaciador(50, screenWidth * 0.4),
-              //Boton para Sign up
-              smallButton(
-                () {
-                  //Aqui va la funcion
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return SignUpPage();
-                    }),
-                  );
-                },
-                Color(0xFF58D68D),
-                "Sign up",
-              ),
-              //Boton para sign in
-              smallButton(
-                () {
-                  //Aqui va la funcion
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return SignInPage();
-                    }),
-                  );
-                },
-                Color(0xFF58D68D),
-                "Sign In",
-              ),
-            ],
-          ),
+          
+
           Row(
             children: [
               Spacer(),
@@ -126,6 +98,9 @@ class welcomePage extends StatelessWidget {
           Spacer(flex: 2),
         ]),
       ),
+     ),
     );
+     
+    
   }
 }

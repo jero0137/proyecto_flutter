@@ -12,15 +12,27 @@ class SedesPage extends StatelessWidget {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Ver Sedes"),
+        backgroundColor: Color(0xFFDC7633),
+      ),
+      backgroundColor: Color(0xFFDC7633),
       body: Center(
           child: Container(
         width: screenWidth * 0.8,
         height: screenHeight * 0.9,
         decoration: BoxDecoration(
-          color: Color(0xFFCB4335),
+          color: Color(0xFFFBFCFC),
           borderRadius: BorderRadius.circular(10),
         ),
         child: Column(children: [
+
+          filaSedes("Sede Poblado", "Calle 48B # 83-20", "assets/logo.png", () {darSede("assets/logo.png", context);}),
+          spaciador(30, 0),
+          filaSedes("Sede Laureles", "Calle 48B # 83-20", "assets/logo.png", () {darSede("assets/logo.png", context);}),
+          spaciador(30, 0),
+          filaSedes("Sede Calazans", "Calle 48B # 83-20", "assets/logo.png", () {darSede("assets/logo.png", context);}),
+          /*
           spaciador(30, 0),
           Row(
             children: [
@@ -60,8 +72,10 @@ class SedesPage extends StatelessWidget {
           Spacer(
             flex: 2,
           ),
+          */
         ]),
       )),
     );
   }
+  
 }

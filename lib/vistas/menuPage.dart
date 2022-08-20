@@ -14,39 +14,43 @@ class menuPage extends StatelessWidget {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Color(0xFFFBFCFC),
+      appBar: barra("Inicio", context),
+      backgroundColor: Color(0xFFDC7633),
       body: Center(
         child: Container(
-          width: screenWidth * 0.8,
-          height: screenHeight * 0.95,
+          width: screenWidth,
+          height: screenHeight,
           decoration: BoxDecoration(
-            color: Color(0xFFCB4335),
+            color: Color(0xFFFBFCFC),
             borderRadius: BorderRadius.circular(10),
           ),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Spacer(),
-                    titleText("Menu"),
-                    Spacer(),
-                  ],
+                spaciador(30, 0),
+                
+                Center(
+                  child: Column(
+                    children: [
+                      filaComida("assets/logo.png", "Pollo a la plancha", "15,000"),
+                      spaciador(10, 0.0),
+                      filaComida("assets/logo.png", "Solomo a la plancha", "15,000"),
+                      spaciador(10, 0.0),
+                      filaComida("assets/logo.png", "Tomahawk", "15,000"),
+                      spaciador(10, 0.0),
+                      filaComida("assets/logo.png", "Chicharron", "15,000"),
+                      spaciador(10, 0.0),
+                      filaComida("assets/logo.png", "Filete de cerdo", "15,000"),
+                      spaciador(10, 0.0),
+                      filaComida("assets/logo.png", "Robalo apanado", "15,000"),
+                      spaciador(10, 0.0),
+                      filaComida("assets/logo.png", "Tilapia a la plancha", "15,000"),
+                      spaciador(10, 0.0),
+                    ],
+                  ),
+                
                 ),
-                filaComida("assets/logo.png", "Pollo a la plancha", "15,000"),
-                spaciador(10, 0.0),
-                filaComida("assets/logo.png", "Solomo a la plancha", "15,000"),
-                spaciador(10, 0.0),
-                filaComida("assets/logo.png", "Tomahawk", "15,000"),
-                spaciador(10, 0.0),
-                filaComida("assets/logo.png", "Chicharron", "15,000"),
-                spaciador(10, 0.0),
-                filaComida("assets/logo.png", "Filete de cerdo", "15,000"),
-                spaciador(10, 0.0),
-                filaComida("assets/logo.png", "Robalo apanado", "15,000"),
-                spaciador(10, 0.0),
-                filaComida("assets/logo.png", "Tilapia a la plancha", "15,000"),
-                spaciador(10, 0.0),
+                
               ],
             ),
           ),
