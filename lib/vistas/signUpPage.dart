@@ -17,10 +17,10 @@ class SignUpPage extends StatelessWidget {
     screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: barra("Inicio", context),
-      backgroundColor: Color(0xFFDC7633),
+      backgroundColor: Color(0xFFE59866),
       body: Center(
         child: Container(
-          width: screenWidth * 0.8,
+          width: screenWidth * 0.95,
           height: screenHeight * 0.9,
           decoration: BoxDecoration(
             color: Color(0xFFF4F6F7),
@@ -40,17 +40,14 @@ class SignUpPage extends StatelessWidget {
             Spacer(flex: 2),
             textFieldPass("Phone number"),
             Spacer(flex: 2),
-            largeButton(
-              () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return welcomePage();
-                    }),
-                  );
-              }, 
-              Color(0xFF58D68D),
-              "Sign up"),
+            largeButton(() {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return welcomePage();
+                }),
+              );
+            }, Color(0xFF58D68D), "Sign up"),
             Spacer(flex: 2),
           ]),
         ),

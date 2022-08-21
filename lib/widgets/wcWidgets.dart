@@ -90,11 +90,9 @@ SizedBox spaciador(double height, double width) {
 Row filaComida(String asset, String namePlato, String precio) {
   return Row(
     children: [
-
       Column(
         children: [
           Image(image: AssetImage(asset)),
-          
         ],
       ),
       spaciador(0, 30),
@@ -108,7 +106,8 @@ Row filaComida(String asset, String namePlato, String precio) {
   );
 }
 
-Row filaPedido(String asset, String namePlato, String precio, VoidCallback funcion) {
+Row filaPedido(
+    String asset, String namePlato, String precio, VoidCallback funcion) {
   return Row(
     children: [
       GestureDetector(
@@ -132,36 +131,34 @@ Row filaPedido(String asset, String namePlato, String precio, VoidCallback funci
       Column(
         children: [
           Text(
-            namePlato, 
+            namePlato,
             textAlign: TextAlign.center,
           ),
-          
         ],
       ),
       Spacer(),
       Column(
         children: [
           Text(
-            precio, 
+            precio,
             textAlign: TextAlign.center,
           ),
-
         ],
       ),
       Spacer(),
-      
     ],
   );
 }
 
-Row filaSedes(String titulo, String direccion, String asset, VoidCallback funcion) {
+Row filaSedes(
+    String titulo, String direccion, String asset, VoidCallback funcion) {
   return Row(
     children: [
       GestureDetector(
         onTap: funcion,
         child: Container(
-          width: 70,
-          height: 70,
+          width: 100,
+          height: 100,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             border: Border.all(
@@ -171,68 +168,35 @@ Row filaSedes(String titulo, String direccion, String asset, VoidCallback funcio
           child: Center(
               child: Image(
             image: AssetImage(asset),
+            width: 300,
+            height: 300,
           )),
         ),
       ),
       Spacer(),
       Column(
-        children: [
-          Text(
-            titulo, 
-            textAlign: TextAlign.center,
-          ),
-          
-        ],
+        children: [titleText(titulo), subTitle(direccion)],
       ),
       Spacer(),
-      Column(
-        children: [
-          Text(
-            direccion, 
-            textAlign: TextAlign.center,
-          ),
-
-        ],
-      ),
-      Spacer(),
-      
     ],
   );
 }
 
-
-
-AppBar barra(String titulo, BuildContext context){
-
+AppBar barra(String titulo, BuildContext context) {
   return AppBar(
     toolbarHeight: 35,
     leading: IconButton(
-      icon: Icon(Icons.arrow_back , color: Color(0xFFDC7633),),
+      icon: Icon(
+        Icons.arrow_back,
+        color: Color(0xFFDC7633),
+      ),
       onPressed: (() => Navigator.of(context).pop()),
     ),
     title: Text(
       titulo,
-      style: TextStyle(color: Color(0xFFDC7633)),),
+      style: TextStyle(color: Color(0xFFDC7633)),
+    ),
     centerTitle: true,
     backgroundColor: Color(0xFFF4F6F7),
   );
 }
-
-AlertDialog darSede(String asset, BuildContext context){
-
-    return AlertDialog(
-      title: Text("Reserva"),
-      content: SizedBox(
-        child: Column(children: [
-          Image.asset("assets/logo.png"),
-        ])
-      ),
-      actions: <Widget>[
-      
-        largeButton((){
-          Navigator.of(context).pop();
-        }, Color(0xFFDC7633), "Exit"),
-      ],
-    );
-  }
-

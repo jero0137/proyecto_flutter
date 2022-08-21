@@ -17,41 +17,21 @@ class SignInPage extends StatelessWidget {
     screenHeight = MediaQuery.of(context).size.height;
     screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      
-      
-      backgroundColor: Color(0xFFDC7633),
+      backgroundColor: Color(0xFFE59866),
       body: Center(
         child: Container(
           width: screenWidth * 0.8,
           height: screenHeight * 0.9,
           decoration: BoxDecoration(
-            color: Color( 0xFFF4F6F7),
+            color: Color(0xFFF4F6F7),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Column(children: [
-
-            Row(
-              
-              children: [
-                
-                Spacer(),
-                smallButton(
-                  (){
-
-                    Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return SignUpPage();
-                    }),
-                  );
-                }, 
-                Color(0xFF58D68D), 
-                "Sign Up"),
-                spaciador(50.0, 20.0),
-              ],
+            Image(
+              image: AssetImage("assets/personas.png"),
+              width: 200,
+              height: 200,
             ),
-
-            Image(image: AssetImage("assets/personas.png"), width: 200, height:200,),
             Spacer(flex: 1),
             titleText("Sign In"),
             SizedBox(height: 8),
@@ -77,31 +57,33 @@ class SignInPage extends StatelessWidget {
               ),
             ),
             Spacer(),
-            largeButton(
-              () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return welcomePage();
-                    }),
-                  );
-            },
-             Color(0xFF58D68D), 
-             "Sign In"),
-            Spacer(flex: 2),
-            largeButton(
-              () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return menuPage();
-                    }),
-                  );
-            },
-             Color(0xFF58D68D), 
-             "Ver menu"
-             ),
-             Spacer(),
+            largeButton(() {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return welcomePage();
+                }),
+              );
+            }, Color(0xFFE59866), "Sign In"),
+            Spacer(),
+            largeButton(() {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return SignUpPage();
+                }),
+              );
+            }, Color(0xFFE59866), "Sign Up"),
+            Spacer(flex: 1),
+            largeButton(() {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return menuPage();
+                }),
+              );
+            }, Color(0xFFF1948A), "Ver menu"),
+            Spacer(),
           ]),
         ),
       ),
