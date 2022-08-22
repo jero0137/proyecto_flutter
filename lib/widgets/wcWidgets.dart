@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 GestureDetector largeButton(VoidCallback function, Color bgColor, String text) {
@@ -87,19 +89,23 @@ SizedBox spaciador(double height, double width) {
   );
 }
 
-Row filaComida(String asset, String namePlato, String precio) {
+Row filaComida(String asset, String namePlato, int precio) {
   return Row(
     children: [
       Column(
         children: [
-          Image(image: AssetImage(asset), width: 200, height: 200,),
+          Image(
+            image: AssetImage(asset),
+            width: 200,
+            height: 200,
+          ),
         ],
       ),
       spaciador(0, 30),
       Column(
         children: [
           Text(namePlato),
-          Text(precio),
+          Text(precio.toString()),
         ],
       ),
     ],
@@ -107,7 +113,7 @@ Row filaComida(String asset, String namePlato, String precio) {
 }
 
 Row filaPedido(
-    String asset, String namePlato, String precio, VoidCallback funcion) {
+    String asset, String namePlato, int precio, VoidCallback funcion) {
   return Row(
     children: [
       GestureDetector(
@@ -140,7 +146,7 @@ Row filaPedido(
       Column(
         children: [
           Text(
-            precio,
+            precio.toString(),
             textAlign: TextAlign.center,
           ),
         ],

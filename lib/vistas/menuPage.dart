@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:proyecto_flutter/vistas/comidas.dart';
 import 'package:proyecto_flutter/widgets/wcWidgets.dart';
 
 class menuPage extends StatelessWidget {
   double screenHeight = 0.0;
   double screenWidth = 0.0;
+
+  Pollo pollo = new Pollo();
+  Solomo solomo = new Solomo();
+  Tomahawk tomahawk = new Tomahawk();
+  Chicharron chicharron = new Chicharron();
+  Cerdo cerdo = new Cerdo();
+  Robalo robalo = new Robalo();
+  Tilapia tilapia = new Tilapia();
 
   menuPage({Key? key}) : super(key: key);
 
@@ -28,29 +37,33 @@ class menuPage extends StatelessWidget {
             child: Column(
               children: [
                 spaciador(30, 0),
-                
                 Center(
                   child: Column(
                     children: [
-                      filaComida("assets/pollo.jpg", "Pollo a la plancha", "15,000"),
+                      filaComida(
+                          "assets/pollo.jpg", pollo.nombre, pollo.precio),
                       spaciador(10, 0.0),
-                      filaComida("assets/solomo.jpg", "Solomo a la plancha", "15,000"),
+                      filaComida(
+                          "assets/solomo.jpg", tilapia.nombre, tilapia.precio),
                       spaciador(10, 0.0),
-                      filaComida("assets/tomahawk.jpg", "Tomahawk", "15,000"),
+                      filaComida("assets/tomahawk.jpg", tomahawk.nombre,
+                          tomahawk.precio),
                       spaciador(10, 0.0),
-                      filaComida("assets/chicharron.jpg", "Chicharron", "15,000"),
+                      filaComida("assets/chicharron.jpg", chicharron.nombre,
+                          chicharron.precio),
                       spaciador(10, 0.0),
-                      filaComida("assets/cerdo.jpg", "Filete de cerdo", "15,000"),
+                      filaComida(
+                          "assets/cerdo.jpg", cerdo.nombre, cerdo.precio),
                       spaciador(10, 0.0),
-                      filaComida("assets/robalo.jpg", "Robalo apanado", "15,000"),
+                      filaComida(
+                          "assets/robalo.jpg", robalo.nombre, robalo.precio),
                       spaciador(10, 0.0),
-                      filaComida("assets/tilapia.jpg", "Tilapia", "15,000"),
+                      filaComida(
+                          "assets/tilapia.jpg", tilapia.nombre, tilapia.precio),
                       spaciador(10, 0.0),
                     ],
                   ),
-                
                 ),
-                
               ],
             ),
           ),

@@ -30,12 +30,12 @@ class SedesPage extends StatelessWidget {
                 builder: (BuildContext) {
                   return AlertDialog(
                     title: Text("Sede Poblado"),
-                    content: Column(
+                    content: Row(
                       children: [
                         Image(
-                          image: AssetImage("assets/logo.png"),
+                          image: AssetImage("assets/poblado.JPG"),
                           width: 250,
-                          height: 200,
+                          height: 250,
                         )
                       ],
                     ),
@@ -57,7 +57,13 @@ class SedesPage extends StatelessWidget {
                   return AlertDialog(
                     title: Text("Sede laureles"),
                     content: Row(
-                      children: [Image(image: AssetImage("assets/logo.png"))],
+                      children: [
+                        Image(
+                          image: AssetImage("assets/laureles.JPG"),
+                          width: 250,
+                          height: 250,
+                        )
+                      ],
                     ),
                     actions: [
                       TextButton(
@@ -77,7 +83,13 @@ class SedesPage extends StatelessWidget {
                   return AlertDialog(
                     title: Text("Sede Calazans"),
                     content: Row(
-                      children: [Image(image: AssetImage("assets/logo.png"))],
+                      children: [
+                        Image(
+                          image: AssetImage("assets/calasanz.JPG"),
+                          width: 250,
+                          height: 250,
+                        )
+                      ],
                     ),
                     actions: [
                       TextButton(
