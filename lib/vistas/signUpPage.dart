@@ -47,7 +47,7 @@ class SignUpPage extends StatelessWidget {
                   return welcomePage();
                 }),
               );
-            }, Color(0xFF58D68D), "Sign up"),
+            }, Color(0xFFDC7633), "Sign up"),
             Spacer(flex: 2),
           ]),
         ),

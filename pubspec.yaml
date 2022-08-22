@@ -35,5 +35,12 @@ flutter:
   assets:
     - assets/logo.png
     - assets/personas.png
+    - assets/tilapia.jpg
+    - assets/solomo.jpg
+    - assets/pollo.jpg
+    - assets/chicharron.jpg
+    - assets/cerdo.jpg
+    - assets/tomahawk.jpg
+    - assets/robalo.jpg
 
 

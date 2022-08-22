@@ -92,7 +92,7 @@ Row filaComida(String asset, String namePlato, String precio) {
     children: [
       Column(
         children: [
-          Image(image: AssetImage(asset)),
+          Image(image: AssetImage(asset), width: 200, height: 200,),
         ],
       ),
       spaciador(0, 30),
